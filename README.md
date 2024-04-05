@@ -1,4 +1,4 @@
-#A Count Down Timer With attractive UI
+# A Count Down Timer With attractive UI
 
 This is built using 
 1)Javascript 
