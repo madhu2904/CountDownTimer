@@ -5,5 +5,5 @@ This is built using
 2)HTML
 3)Css 
 
-With options to start,stop and reset the timer .What makes it stand apart is it's *User Interface*
+With options to start,stop and reset the timer with background animation.What makes it stand apart is it's *User Interface*
 
