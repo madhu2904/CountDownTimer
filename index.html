@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./styles.css" rel="stylesheet"/>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+</head>
+<body>
+    <span id="text"><h1>COUNT YOUR TIME !!</h1></span>
+    <div class="slider-thumb">
+
+    <div class="container" >
+        
+
+
+        
+       <div id="box">
+        
+        <span id="hours">00</span>
+        
+    </div>
+    
+       <div id="box">
+        <span id="mins">00</span>
+    </div>
+       <div id="box">
+        <span id="seconds">00</span>
+    </div>
+    </div>
+    <div id="btncont">
+    <button  id="start">START</button>
+    <button  id="stop">STOP</button>
+    <button  id="reset">RESET</button>
+</div>
+</div></div>
+<script>
+        let hours = 0;
+        let minutes = 0;
+        let seconds = 0;
+        let Id;
+        let count=0;
+       
+
+        function startTimer() 
+        {if(count ==0)
+      {  Id = setInterval(updateTimer, 1000);
+        count=count+1;
+    }  }
+
+        function updateTimer() {
+            seconds++;
+            if (seconds === 60) {
+                seconds = 0;
+                minutes++;
+                if (minutes === 60) {
+                    minutes = 0;
+                    hours++;
+                    
+                }
+            }
+
+            
+            $('#hours').text(hours.toString().padStart(2, '0'));
+            $('#mins').text(minutes.toString().padStart(2, '0'));
+            $('#seconds').text(seconds.toString().padStart(2, '0'));
+        }
+
+        function stopTimer() {
+            clearInterval(Id);
+            count=0;
+        }
+
+        function resetTimer() {
+            hours = 0;
+            minutes = 0;
+            seconds = 0;
+            $('#hours').text('00');
+            $('#mins').text('00');
+            $('#seconds').text('00');
+            clearInterval(Id);
+            count=0;
+        }
+
+        
+        $('#start').on('click', startTimer);
+        $('#stop').on('click', stopTimer);
+        $('#reset').on('click', resetTimer);
+
+
+</script>
+</body>
+</html>

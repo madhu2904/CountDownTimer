@@ -1,0 +1,101 @@
+body {
+    height: 100vh;
+     background: linear-gradient(90deg,#e52e71,#ff8a00);
+  
+  }
+  
+  .slider-thumb::before {
+    position: absolute;
+    content: "";
+    left: 30%;
+    top: 20%;
+    width: 450px;
+    height: 450px;
+    background: #17141d;
+    border-radius: 62% 47% 82% 35% / 45% 45% 80% 66%;
+    will-change: border-radius, transform, opacity;
+    animation: sliderShape 5s linear infinite;
+    display: block;
+    z-index: -1;
+    -webkit-animation: sliderShape 5s linear infinite;
+  }
+  @keyframes sliderShape{
+    0%,100%{
+    border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+      transform: translate3d(0,0,0) rotateZ(0.01deg);
+    }
+    34%{
+        border-radius: 70% 30% 46% 54% / 30% 29% 71% 70%;
+      transform:  translate3d(0,5px,0) rotateZ(0.01deg);
+    }
+    50%{
+      transform: translate3d(0,0,0) rotateZ(0.01deg);
+    }
+    67%{
+      border-radius: 100% 60% 60% 100% / 100% 100% 60% 60% ;
+      transform: translate3d(0,-3px,0) rotateZ(0.01deg);
+    }
+  } 
+  
+
+  
+#box{
+    height:175px;
+    width: 180px;
+    position: relative;
+    border-radius: 20px;
+    background-color: lightcyan;
+    margin-top: 100px ;
+    
+}
+.container{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    gap:50px;
+    
+   
+
+}
+#hours{
+    font-size: 150px;
+    padding: 25px 10px 15px 10px;
+    margin-top: 30px;
+
+}
+#mins{
+    font-size: 150px;
+    padding: 25px 10px 10px 10px;
+}
+#seconds{
+    font-size: 150px;
+    padding: 25px 10px 10px 10px;
+}
+button{
+    border-radius: 5px;
+}
+#start{
+    margin-left:224px;
+    margin-top: 30px;
+    font-weight: 800px;
+    background-color: lightgreen;
+}
+
+#stop{
+    margin-left: 180px;
+    font-weight: 800px;
+    background-color: red;
+}
+#reset{
+    margin-left: 170px;
+    font-weight: 800px;
+    background-color: orange;
+
+}
+#text{
+  font-size: 20px;
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+color:rgb(51, 20, 163);
+
+}
