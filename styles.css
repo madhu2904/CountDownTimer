@@ -75,19 +75,21 @@ button{
     border-radius: 5px;
 }
 #start{
-    margin-left:224px;
+    /* margin-left:224px; */
     margin-top: 30px;
     font-weight: 800px;
     background-color: lightgreen;
 }
 
 #stop{
-    margin-left: 180px;
+    /* margin-left: 180px; */
+    margin-top: 30px;
     font-weight: 800px;
     background-color: red;
 }
 #reset{
-    margin-left: 170px;
+    /* margin-left: 170px; */
+    margin-top: 30px;
     font-weight: 800px;
     background-color: orange;
 
@@ -98,4 +100,10 @@ button{
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 color:rgb(51, 20, 163);
 
+}
+#btncont
+{
+  display:flex;
+  gap:200px;
+  justify-content:center;
 }
