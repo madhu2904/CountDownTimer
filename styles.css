@@ -106,4 +106,5 @@ color:rgb(51, 20, 163);
   display:flex;
   gap:200px;
   justify-content:center;
+  margin-left: auto;
 }
